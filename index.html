@@ -47,6 +47,23 @@
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
     </script>
+        <style>
+            .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Bu oran 16:9 ekran oranını temsil eder */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+        </style>
 </div>
 </head>
 
@@ -485,10 +502,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Konum</h4>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d751.6708844081231!2d28.860782569662405!3d41.09776060885064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab02a5c5e23b5%3A0xaa2f6bea5a18b78d!2sSultan%C3%A7iftli%C4%9Fi%2C%2021.%20Sk.%20No%3A17%2C%2034265%20Sultangazi%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1695042683391!5m2!1str!2str"
-                        width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d751.6708844081231!2d28.860782569662405!3d41.09776060885064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab02a5c5e23b5%3A0xaa2f6bea5a18b78d!2sSultan%C3%A7iftli%C4%9Fi%2C%2021.%20Sk.%20No%3A17%2C%2034265%20Sultangazi%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1695042683391!5m2!1str!2str"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
                 </div>
             </div>
         </div>
